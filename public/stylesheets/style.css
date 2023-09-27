@@ -1,8 +1,57 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 a {
   color: #00B7FF;
 }
+/* Reset some default styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Style for messages */
+#messages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.message {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Add hover effect to messages */
+.message:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
