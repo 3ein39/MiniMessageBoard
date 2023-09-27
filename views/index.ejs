@@ -7,5 +7,16 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+<!--  loop through messages and add them to divs-->
+    <div id="messages">
+      <% messages.forEach(function(message){ %>
+        <div class="message">
+<!--          text, user and date-->
+            <p><%= message.text %></p>
+            <p><%= message.user %></p>
+            <p><%= message.added %></p>
+        </div>
+      <% }) %>
+    </div>
   </body>
 </html>

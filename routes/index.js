@@ -19,9 +19,11 @@ const messages = [
           user : "Sayed the cat",
           added: new Date()
   }]
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'MiniMessageBoard', messages : messages});
 });
 
 module.exports = router;
