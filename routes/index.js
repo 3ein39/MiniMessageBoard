@@ -32,12 +32,14 @@ router.get('/new', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
     const newMessage = {
+        // named according to the form's input names
         text: req.body.text,
         user: req.body.user,
         added: new Date()
     };
     messages.push(newMessage);
     // console.log(messages);
+    // redirect to the home page
     res.redirect('/');
 });
 
