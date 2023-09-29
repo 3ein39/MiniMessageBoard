@@ -1,0 +1,39 @@
+/* Common styles for both pages */
+body {
+    background-color: #222831; /* Dark background color */
+    color: #cfcfcf; /* Light text color */
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    color: #00ADB5; /* Catpuccino Mocha heading color */
+}
+
+a {
+    color: #00ADB5; /* Catpuccino Mocha link color */
+}
+
+/* Styles specific to the form page */
+form {
+    margin: 20px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #393E46; /* Input background color */
+    color: #EEEEEE; /* Input text color */
+    border: 1px solid #4e4e4e; /* Input border color */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #00ADB5; /* Submit button background color */
+    color: #EEEEEE; /* Submit button text color */
+    cursor: pointer;
+}
+
+/* Add more styles as needed */

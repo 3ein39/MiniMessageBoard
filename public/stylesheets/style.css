@@ -1,79 +1,19 @@
-/* Reset some default styles */
-body, form, input {
-  margin: 0;
-  padding: 0;
-}
-
+/* Common styles for both pages */
 body {
+  background-color: #1e1e1e; /* Dark background color */
+  color: #cfcfcf; /* Light text color */
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Messages and Form Styles */
-form, #messages {
-  max-width: 400px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-input[type="submit"]:hover {
-  background-color: #555;
-}
-
-/* Messages-specific Styles */
-.message {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.message p {
-  font-size: 14px;
-  color: #333;
-  margin: 5px 0;
-}
-
-/* Add hover effect to messages */
-.message:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.02);
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-/* Center the form vertically */
-html, body {
-  height: 100%;
-}
-
-body {
+  max-width: 80%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+h1 {
+  color: #6b7f94; /* Catpuccino Mocha heading color */
+}
+
+a {
+  color: #6b7f94; /* Catpuccino Mocha link color */
 }
