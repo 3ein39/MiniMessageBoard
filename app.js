@@ -4,9 +4,24 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
+// add dotenv
+require('dotenv').config();
 const index = require('./routes/index');
 const users = require('./routes/users');
+// Connect to the database
+const mongoose = require('mongoose');
+const MongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/mini-message-board';
+
+mongoose.connect(MongoURL,
+    {useNewUrlParser: true, useUnifiedTopology: true}
+);
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    // we're connected!
+    console.log(`Connected to database at ${MongoURL}`);
+});
 
 const app = express();
 

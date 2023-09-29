@@ -1,45 +1,27 @@
 const express = require('express');
 const router = express.Router();
+const Message = require('../models/message');
 
-
-// some placeholder messages
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    }
-    , {
-          text: "Hello World!",
-          user : "Charles",
-          added: new Date()
-    }
-    , {
-          text: "Meow!",
-          user : "Sayed the cat",
-          added: new Date()
-  }]
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'MiniMessageBoard', messages : messages});
+router.get('/', async function(req, res, next) {
+    const messages = await Message.find({});
+    res.render('index', { title: 'Mini Message Board', messages: messages});
 });
 
 router.get('/new', function(req, res, next) {
     res.render('form', { title: 'New Message'});
 });
 
-router.post('/new', function(req, res, next) {
-    const newMessage = {
-        // named according to the form's input names
+router.post('/new', async function(req, res, next) {
+    // create a new message
+    const newMessage = new Message({
         text: req.body.text,
-        user: req.body.user,
-        added: new Date()
-    };
-    messages.push(newMessage);
-    // console.log(messages);
-    // redirect to the home page
+        user: req.body.user
+    });
+    // save the message to the database
+    await newMessage.save();
     res.redirect('/');
 });
 
