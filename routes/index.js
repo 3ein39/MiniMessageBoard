@@ -7,6 +7,8 @@ const Message = require('../models/message');
 /* GET home page. */
 router.get('/', async function(req, res, next) {
     const messages = await Message.find({});
+    // sort messages by date from newest to oldest
+    messages.sort((a, b) => b.added - a.added);
     res.render('index', { title: 'Mini Message Board', messages: messages});
 });
 
