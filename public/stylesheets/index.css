@@ -1,0 +1,51 @@
+/* Common styles for both pages */
+body {
+    background-color: #222831; /* Dark background color */
+    color: #cfcfcf; /* Light text color */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #00ADB5; /* Catpuccino Mocha heading color */
+}
+
+a {
+    color: #00ADB5; /* Catpuccino Mocha link color */
+}
+
+/* Styles specific to the index page */
+#messages {
+    margin: 20px;
+}
+
+.message {
+    background-color: #393E46; /* Message background color */
+    border-radius: 10px;
+    border: 1px solid #3e3e3e; /* Message border color */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Add more styles as needed */
+
+.message-text {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-bottom: 5px;
+    color: #EEEEEE; /* Message text color */
+}
+
+.message-user {
+    font-weight: bold; /* Make the user name bold */
+    color: #EEEEEE; /* User name color */
+    margin-bottom: 5px;
+    margin-left: 16px;
+}
+
+.message-date {
+    font-size: 12px; /* Adjust the font size for the date */
+    color: #888; /* Date color */
+}
+.message-content {
+    display: flex;
+    justify-content: space-between;
+}
