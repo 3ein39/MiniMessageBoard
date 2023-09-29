@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="/stylesheets/index.css">
   </head>
   <body>
     <h1><%= title %></h1>
@@ -12,9 +13,12 @@
       <% messages.forEach(function(message){ %>
         <div class="message">
 <!--          text, user and date-->
-            <p><%= message.text %></p>
-            <p><%= message.user %></p>
-            <p><%= message.added %></p>
+            <div class="message-content">
+            <p class="message-text"><%= message.text %></p>
+            <p class="message-user"><%= message.user %></p>
+            </div>
+            <p class="message-date"><%= message.added %></p>
+
         </div>
       <% }) %>
     </div>
