@@ -2,6 +2,9 @@
 
 MiniMessageBoard is a web application that allows users to post and view messages. It is built using Node.js, Express.js, and MongoDB. Users can submit new messages, which are stored in a MongoDB database, and view existing messages.
 
+![image](https://github.com/3ein39/MiniMessageBoard/assets/37001450/b7ae197b-a3c4-47b8-961b-95b96c7a216c)
+
+
 ## Deployment
 
 - **[View the App](https://mini-message-board-3ein39-eaefa5948ebb.herokuapp.com/)**: You can access the MiniMessageBoard application [here](https://mini-message-board-3ein39-eaefa5948ebb.herokuapp.com/). <!-- Replace with your app's URL -->
